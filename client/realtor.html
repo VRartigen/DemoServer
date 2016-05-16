@@ -1,0 +1,24 @@
+
+<template name="realtor">
+
+<div class = "home-content">
+        <button id="realterlistpropertiesbtn" class="btn btn-primary list-btn" style="width:400px; height:60px">List All Properties</button><br />
+    
+        <button id="realtercreatesavepropertiesbtn" class="btn btn-primary btn-create" style="width:400px; margin-top:20px; height:60px" >Create/Saved Properties</button>
+    </div>
+</template>
+
+<template name = "listproperty">
+    <div class="row">
+        <div class="container">
+         {{#each images}}
+         <div class="col-xs-12 col-md-3" id="{{_id}}">
+  	           <div class="thumbnail">
+                    <img class="js-image thumbnail-img"  src="{{src}}"/>
+               </div>
+        </div>
+        {{/each}}
+        </div>
+    </div>    
+    
+</template>

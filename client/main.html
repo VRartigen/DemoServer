@@ -1,0 +1,67 @@
+<head>
+  <title>simple</title>
+ 
+</head>
+
+<body>
+    <div id = "footer" style="color:#a39478">
+        <center> <h2>Artigen Corporation copyright 2016</h2> </center>
+    </div>
+    <img class="alogo" src="Artigen-logo-web.gif" height="125px" width="300px" style="margin-top:80px; cursor:pointer; cursor:hand"/>
+    {{> navigation}}
+    
+ 
+</body>
+
+
+<template name = "home">
+    
+  
+  <div class = "home-content" >
+        <img src="vrHome-logo-web.gif" width="280px" height="120"><br />
+         
+         <img src="logo.png"  height="250px" width="250px"/>
+  
+   </div>
+ 
+</template>
+
+
+<template name="navigation">
+   
+       
+   
+    <nav class = "navbar navbar-inverse navbar-fixed-top" >
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <h1 class = "navbar-brand">Welcome {{currentUser.profile.name}}</h1>
+            </div>
+            <div id = "navbar" class = "navbar-collapse collapse">
+                
+                <ul class = "nav navbar-nav navbar-right navbar-brand">
+                    <li><a href="{{pathFor route='home'}}">Home</a></li>
+                    
+                    {{#if currentUser}}
+                        
+                        <li><a href="#">Settings</a></li>
+                        <li><button class="btn btn-danger btn-logout" style="margin-top:10px;">Logout {{currentUser.profile.name}}</button></li>
+                       
+                    {{else}}
+                        <style>
+                            body{
+                                background-image: "artigenback.jpg";
+                            }
+                        </style>
+                        <li><a href="login">Login</a></li>
+                        <li><a href="register">Register</a></li>
+                    {{/if}}
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    
+    
+</template>
+

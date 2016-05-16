@@ -1,0 +1,35 @@
+<template name="createpropertyrealter1">
+ 
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-5 col-md-offset-3">
+                <div class="panel-heading">
+                     <center><h3>Create Property</h3></center>
+                </div>
+                
+                <br /><br /><br />
+                
+                <div class="form-inline">
+                    <div class="form-group">
+                        <button id="get_file" class="btn btn-primary" type="button">Upload BluePrint </button>
+                        <input type="file" id="my_file">
+                        <input type="text" class="form-control" style="width: 150px" id="uploadblueprintrealter" placeholder="Upload BluePrint" />
+                        <label for="filetype" class="form-control" style="background:#00FFFF;border-style:none">(.CAD, .DXF, 3D, 2D)</label>
+                    </div><br /><br /><br />
+                    <div class="form-group">
+                        <button id="realtorcreateblueprint" class="btn btn-primary" type="button">Create BluePrint</button>
+                        <a href="http://www.sensopia.com/english/index.html" target="_blank" id="magicplan"><input type="image" src="magicplan.png" alt="Submit" width="40" height="40" style="margin-bottom:-1em; margin-left:1em"/></a>
+                        <label for="filetype" class="form-control" style="background:#00FFFF;border-style:none">Using MagicPlan</label>
+                    </div><br /><br /><br />
+                    <div class="form-group">
+                        <button id="locateblueprintbtn" class="btn btn-primary" type="button">Locate BluePrint</button>
+                        <input class="form-control" type="text" id="locateblueprintRealter" style="width: 315px" placeholder="Search by zip code, city, state" />
+                    </div>
+                </div>
+      
+            </div>
+            
+        </div>
+    </div>
+</template>
